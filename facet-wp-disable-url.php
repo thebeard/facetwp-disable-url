@@ -19,7 +19,7 @@ function disable_javascript_url_structure() { ?>
 
 	<script type="text/javascript">
 		( function( $ ) {
-			$( window ).load( disableJavascriptURL );
+			$( window ).on( 'load', disableJavascriptURL );
 
 			function disableJavascriptURL() {
 				if ( fwpSetHashMethodSet() ) FWP.set_hash = function() { return; };
